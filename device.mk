@@ -14,22 +14,19 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_system=true
 
 # Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+# Boot Control HAL untuk Android 10-12 (HIDL)
+# PRODUCT_PACKAGES += \
+#    android.hardware.boot@1.2-impl \
+#    android.hardware.boot@1.2-service
 
+Untuk Android 13+ (AIDL), ganti dengan:
 PRODUCT_PACKAGES += \
-    bootctrl.mt6768
+     android.hardware.boot-service \
+     android.hardware.boot-impl
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+# Tetap sertakan bootctrl untuk chipset MediaTek
+PRODUCT_PACKAGES += \
     bootctrl.mt6768 \
     libgptutils \
     libz \
     libcutils
-
-PRODUCT_PACKAGES += \
-    otapreopt_script \
-    cppreopts.sh \
-    update_engine \
-    update_verifier \
-    update_engine_sideload
