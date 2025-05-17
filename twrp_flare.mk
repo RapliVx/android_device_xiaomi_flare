@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from TECNO-CK7n device
+# Inherit from Flare device
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit some common TWRP stuff.
