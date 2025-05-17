@@ -19,7 +19,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 #    android.hardware.boot@1.2-impl \
 #    android.hardware.boot@1.2-service
 
-Untuk Android 13+ (AIDL), ganti dengan:
+# Untuk Android 13+ (AIDL), ganti dengan:
 PRODUCT_PACKAGES += \
      android.hardware.boot-service \
      android.hardware.boot-impl
